@@ -11,11 +11,21 @@ namespace _1_massiv
                 { 1, 2 }, 
                 { 3, 4 } 
             };
-            int sumOfSecondline;
-            int productOfFirstColumn;
+            int sumOfSecondline = 0;
+            int productOfFirstColumn = 1;
 
-            sumOfSecondline = array[1,0] + array[1,1];
-            productOfFirstColumn = array[0,0] * array[1,0];
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                sumOfSecondline += array[1, i];
+            }
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                productOfFirstColumn *= array[i, 0];
+            }
+
+            //sumOfSecondline = array[1,0] + array[1,1];
+            //productOfFirstColumn = array[0,0] * array[1,0];
 
             Console.WriteLine("Сумма второй строки равна: " + sumOfSecondline);
             Console.WriteLine("Произведение первого столбца равно: " + productOfFirstColumn);
